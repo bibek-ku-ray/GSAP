@@ -1,4 +1,4 @@
-let tl = gsap.timeline()
+let tl = gsap.timeline();
 
 tl.from('#nav img, #nav h3, #nav h4, #nav button',{
     y: -100,
