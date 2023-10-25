@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #23272E;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(195, 0, 255);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+    // gsap.to(
+    //     '.box',
+    //     {
+    //         x: 500,
+    //         y: 500,
+    //         duration: 4,
+    //         delay: .5,
+    //         backgroundColor: 'orange',
+    //         scale: 1.5,
+    //         // scaleX: 1.5,
+    //         // scaleY: 2.5,
+    //         borderRadius: '50%',
+    //         rotate: 180,       
+    //     }
+    //     )
+
+    gsap.from(
+        '.box',
+        {
+            x: 500,
+            y: 250,
+            duration: 2,
+            delay: .5,
+            backgroundColor: 'black',
+            scale: 1.5,
+            // scaleX: 1.5,
+            // scaleY: 2.5,
+            borderRadius: '50%',
+            rotate: 180, 
+            // rotation: 27,
+            yoyoEase: true, 
+            repeat: 5,
+            stagger: 1
+        }
+    )
+        
+        /*NOTE: 
+        * by default unit will be in px, if not mentioned
+        * gsap.to means for origin to destination
+        * gsap.from means animation from destination to origin
+        * repeat: 2 -> it will run 3 time (1 time is default after that it will run extra 2 time)
+        * stagger: 1 -> means delay of 1sec in each element 
+        */
+</script>
+</html>

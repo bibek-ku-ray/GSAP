@@ -1,0 +1,138 @@
+@font-face {
+    font-family: gilroy;
+    src: url(Gilroy-Light.otf)
+}
+@font-face {
+    font-family: gilroy-bold;
+    src: url(Gilroy-ExtraBold.otf)
+}
+
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+}
+
+img{
+    height: 65px;
+}
+
+#nav{
+    height: 80px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#nav-part2{
+    
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-transform: uppercase;
+    gap: 50px;
+    font-size: 14px;
+}
+
+
+#nav-part3{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#nav button{
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+#main h1{
+    font-size: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'gilroy-bold';
+    position: relative;
+    z-index: 2;
+   
+    
+}
+
+#main h1 span{
+    font-size: 35px;
+    background-color: crimson;
+    margin: 0 20px;
+    padding: 40px 80px;
+    border-radius: 90px;
+    font-weight: 800;
+    font-family: 'gilroy-bold';
+}
+
+#main h1:nth-child(2){
+    /* color: red; */
+    margin-top: 60px;
+}
+
+#main #left-up-img{
+    height: 200px;
+    position: absolute;
+    top: 14%;
+    left: 7%;
+    border-radius: 30px;
+}
+#main #right-down-img{
+    height: 300px;
+    position: absolute;
+    bottom: 5%;
+    right: 25%;
+    border-radius: 30px;
+}
+
+#main #righ-up-img{
+    height: 250px;
+    position: absolute;
+    top: 70%;
+    left: 12%;
+    border-radius: 30px;
+}
+
+#main #left-down-img{
+    height: 200px;
+    position: absolute;
+    top: 25%;
+    right: 7%;
+    border-radius: 30px;
+}
+
+h5{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    font-size: 25px;
+    transform: translate(-50%, 0);
+
+}
+
+

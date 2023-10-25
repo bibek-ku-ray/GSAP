@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline in GSAP</title>
+    <style>
+        body{
+            background-color: #21272e;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: goldenrod;
+            margin-bottom: 15px;
+        }
+        h1{
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>animation</h1>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+    const timeline = gsap.timeline({repeat: 1});
+
+    timeline.from(
+        '#box1',{
+            x: 300,
+            opacity: 0,
+            duration: 2,
+            borderRadius: '50%' 
+        }
+    )
+    timeline.from(
+        '#box2',{
+            x: 300,
+            opacity: 0,
+            duration: 2
+        }
+    )
+    timeline.from(
+        '#box3',{
+            x: 300,
+            opacity: 0,
+            duration: 2
+        }
+    )
+
+    timeline.from(
+        'h1',{
+            opacity: 0
+        }, +2
+    )
+
+    // timeline.from(
+    //     '.box',{
+    //         x: 300,
+    //         opacity: 0, 
+    //         duration: 3,
+    //         stagger: 2
+    //     })
+</script>
+</html>
