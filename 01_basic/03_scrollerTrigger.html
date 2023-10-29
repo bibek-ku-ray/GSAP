@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll trigger</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #21272e;
+            height: 100vh;
+            /* width: 100%; */
+            
+        }
+
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: crimson;
+        }
+
+        #page1{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(18, 29, 61);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #page2{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(33, 53, 116);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #page3{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(55, 90, 197); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="page1">
+        <div class="box"></div>
+    </div>
+    <div id="page2">
+        <div class="box"></div>
+    </div>
+    <div id="page3">
+        <div class="box"></div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+
+
+    gsap.from('#page1 .box',{
+        scale: 0,
+        duration: 1, 
+        delay: 0.25,
+        rotate: 360
+    })
+    gsap.from('#page2 .box',{
+        scale: 0,
+        duration: 1, 
+        delay: 0.25,
+        rotate: 360,
+        // scrollTrigger:'#page2 .box'
+        scrollTrigger: {
+            trigger: '#page2 .box',
+            backgroundColor: 'orange',
+            scroller: 'body',
+            markers: true,
+            start: 'top 80%',
+            //scrub take boolean or number value both
+            // scrub: true
+            scrub: 5
+        }
+    })
+    gsap.from('#page3 .box',{
+        scale: 0,
+        duration: 1, 
+        delay: 0.25,
+        rotate: 360,
+        // scrollTrigger: '#page3 .box'
+        scrollTrigger: {
+            trigger: '#page3 .box',
+            scroller: 'body',
+            markers: true,
+            start: 'top 80%',
+            // end: 'buttom 30%',
+            scrub: 5
+        }
+    })
+
+</script>
+
+</html>
