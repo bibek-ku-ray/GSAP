@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #21272e;
+    height: 100vh;
+    color: whitesmoke;
+    
+}
+
+#page1{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    padding: 0 50px;
+}
+#page2{
+    width: 100%;
+    height: 100%;
+    background-color: #21272e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+#nav{
+    height: 80px;
+    width: 100%;
+    border-bottom: 2px solid whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+   
+    
+}
+
+button{
+    background-color: black;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: .8rem;
+}
+
+button i{
+    font-size: 30px;
+
+}
+
+.container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.left{
+    height: 100%;
+    width: 50%;
+    padding: 70px 50px;
+}
+
+.right{
+    height: 100%;
+    width: 50%;
+    padding: 70px 50px;
+    overflow: hidden;
+}
+
+.left h1{
+    font-size: 90px;
+    font-weight: 500;
+    line-height: 130px;
+    text-transform: uppercase;
+}
+
+.right img{
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+.left h1 span img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: -50px;
+    border: 3px solid black;
+}
+
+.left h1 span img:nth-child(1){
+    margin-left: 0;
+
+}
+
+.box{
+    height: 300px;
+    width: 300px;
+    background-color: #21272e;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px;
+}
+.box h1{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+
+.box p{
+    font-size: 15px;
+    color: #dadada;
+    font-weight: 300;
+}
